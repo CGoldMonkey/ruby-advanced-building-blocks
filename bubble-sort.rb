@@ -6,7 +6,7 @@ def bubble_sort(array)
   	notSorted = false #set that there has been no swaps made
     array.each_with_index do |value, index| #make a pass throught the array
       #check to the right, if out of order swap, watch for last
-      if array[index] != array.last && value > array[index+1]
+      if index != array.length-1 && value > array[index+1]
       	newLeft = array[index+1]
       	array[index+1] = value
       	array[index] = newLeft
